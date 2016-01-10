@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-
 class FallingRocks
 {
-
     public static void PlaceUnit(Unit unit)
     {
         Console.SetCursorPosition(unit.x, unit.y);
@@ -47,7 +45,6 @@ class FallingRocks
 
     static void Main(string[] args)
     {
-
         bool hitted = false;
 
         // Console settings
@@ -55,7 +52,6 @@ class FallingRocks
         Console.BufferHeight = Console.WindowHeight = 20;
         Console.BufferWidth = Console.WindowWidth = 45;
         Random randomGenerator = new Random();
-
         //Creating types of rocks, the rocks and colours
         char[] typesOfRocks = { '^', '@', '*', '&', '+', '%', '$', '#', '!', '.', ';', '-' };
         List<Unit> Rock = new List<Unit>();
@@ -72,7 +68,6 @@ class FallingRocks
         //Creating and positioning the dwarf
         Unit Dwarf = new Unit((Console.WindowWidth - 10) / 2, Console.WindowHeight - 2, ConsoleColor.Green, '0');
         PlaceUnit(Dwarf);
-
 
         while (!hitted)
         {
@@ -120,7 +115,6 @@ class FallingRocks
             }
 
             //Printing the objects and checking for hit
-
             PlaceUnit(Dwarf);
 
             foreach (var item in Rock)
@@ -145,7 +139,6 @@ class FallingRocks
             }
             Thread.Sleep(150);
         }
-
     }
 }
 
