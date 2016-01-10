@@ -2,7 +2,6 @@
 
     class Unit
     {
-
         public int x;
         public int y;
         public ConsoleColor colour;
@@ -15,5 +14,4 @@
             this.colour = colour;
             this.symbol = symbol;
         }
-
     }
