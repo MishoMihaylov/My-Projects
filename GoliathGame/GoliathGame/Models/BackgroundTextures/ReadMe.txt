@@ -1,1 +1,0 @@
-This is added because of the SVN Commint that cannot accept empty folder.
