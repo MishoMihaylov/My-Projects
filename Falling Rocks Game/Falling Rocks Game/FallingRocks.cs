@@ -46,7 +46,6 @@ class FallingRocks
     static void Main(string[] args)
     {
         bool hitted = false;
-
         // Console settings
         Console.CursorVisible = false;
         Console.BufferHeight = Console.WindowHeight = 20;
@@ -72,7 +71,6 @@ class FallingRocks
         while (!hitted)
         {
             Console.Clear();
-
             //Creating the game field
             CreateField();
 
@@ -120,7 +118,6 @@ class FallingRocks
             foreach (var item in Rock)
             {
                 PlaceUnit(item);
-
                 if (item.x == Dwarf.x && item.y == Dwarf.y)
                 {
                     Console.Clear();
@@ -133,7 +130,6 @@ class FallingRocks
                 }
                 else if (item.y == Dwarf.y && item.x != Dwarf.x)
                 {
-
                     item.y = 1;
                 }
             }
