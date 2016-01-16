@@ -1,0 +1,33 @@
+﻿Bug #1 - isInRange - doesn't work correct; Now its based on Unit's position. Have to be based on center point of the Unit.
+Bug #2 - Attack animation to be made more smoothly.
+Bug #3 - Hero Attack - to be able to attack only enemies in front of him. All inRange enemies.
+Bug #4 - When Hero dies some enemies still attack.
+Bug #5 - Attack synchonize - Animation / Damage taken.
+Bug #6 - MainHero can attack dead enemies
+Bug #7 - Enemy Attack animation blinks
+
+
+
+
+TODO:
+
+Unit:
+- State - Edit to Attack, Idle, Jump, Dead, Run
+
+Hero Animation:
+- Hero Jump Animantion
+- Hero Jump Attack Animation
+
+Enemy Animation:
+- All Animations
+
+Animation:
+- Code Refactoring
+
+Background:
+- Find and Set New Background
+
+Code Refactoring:
+- Edit Animation Methods;
+- Make X const for every Unit.
+
