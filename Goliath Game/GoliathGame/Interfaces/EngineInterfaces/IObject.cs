@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace GoliathGame.Interfaces.EngineInterfaces
 {
-    interface IObject
+    public interface IObject
     {
         void LoadContent(ContentManager theContentManager, string theAssetName);
         void Update(GameTime theGameTime);

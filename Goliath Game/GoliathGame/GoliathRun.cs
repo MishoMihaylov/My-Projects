@@ -13,14 +13,13 @@ namespace GoliathGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Background levelBackground = new Background();
         Engine newEngine;
 
         public GoliathRun()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferWidth = 1024;
+            graphics.IsFullScreen = true;
+            graphics.PreferredBackBufferWidth = 1333;
             graphics.PreferredBackBufferHeight = 768;
 
             Content.RootDirectory = "Content";
@@ -37,7 +36,6 @@ namespace GoliathGame
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             newEngine.LoadContent(Content,"");
-            levelBackground.LoadContent(this.Content, "LevelsBackground/LevelOneBackground");    
         }
 
         protected override void UnloadContent()
@@ -58,10 +56,9 @@ namespace GoliathGame
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.DarkGreen);
 
             spriteBatch.Begin();           
-            levelBackground.Draw(this.spriteBatch);
             newEngine.Draw(this.spriteBatch);       
             spriteBatch.End();
 

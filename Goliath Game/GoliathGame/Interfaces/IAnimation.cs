@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 namespace GoliathGame.Interfaces
 {
-    interface IAnimation
+    public interface IAnimation
     {
         Texture2D UnitIdleBackwardTexture {get; set;}
         Texture2D UnitAttackForwardTexture { get; set; }

@@ -1,9 +1,8 @@
-﻿using System;
-using GoliathGame.Models.UI;
+﻿using GoliathGame.Models.UI;
 
 namespace GoliathGame.Interfaces
 {
-    interface IMainHero
+    public interface IMainHero
     {
         //LoadUI
     }

@@ -1,6 +1,6 @@
 ﻿namespace GoliathGame.Interfaces
 {
-    interface IArmor
+    public interface IArmor
     {
         void Equip(IUnit unit);
     }

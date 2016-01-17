@@ -22,7 +22,7 @@ namespace GoliathGame.Models
         private const string GoliathRunningBackwardAssetPath = "Goliath/RunningBackward";
         private const string GoliathDeadAssetPath = "Goliath/Dead";
         private const int StartingPositionX = 10;
-        private const int StartingPositionY = 500;
+        private const int StartingPositionY = 535;
         private const int GoliathSpeed = 230;
         private const int MoveUp = -1;
         private const int MoveDown = 1;
@@ -42,13 +42,15 @@ namespace GoliathGame.Models
             this.AnimationAssetCurrentFrame = 1;
             this.reverseAnimation = false;
             this.currentState = State.IdleForward;
-            this.IntervalBetweenAttack = TimeSpan.FromMilliseconds(270); //setting new attack speed (for testing)
-            this.isAttackingNow = false;
+            this.AttackSpeedDelay = 0.3;
+            this.AttackDamage = 20;
+            this.IntervalBetweenAttack = TimeSpan.FromSeconds(AttackSpeedDelay + 0.1);
+            this.isAttackingNow = false;         
         }
 
         public void LoadGoliathContent(ContentManager theContentManager)
         {
-            Position = new Vector2(StartingPositionX, StartingPositionY);
+            this.Position = new Vector2(StartingPositionX, StartingPositionY);
             this.LoadContent(theContentManager, GoliathIdleForwardAssetPath); //TODO: To be removed
             this.UnitIdleForwardTexture = theContentManager.Load<Texture2D>(GoliathIdleForwardAssetPath);
             this.UnitIdleBackwardTexture = theContentManager.Load<Texture2D>(GoliathIdleBackwardAssetPath);
@@ -115,7 +117,7 @@ namespace GoliathGame.Models
                 else if (aCurrentKeyboardState.IsKeyDown(Keys.Right) == true)
                 {
 
-                    if (this.Position.X <= 850)
+                    if (this.Position.X <= 1200)
                     {
                         Speed.X = GoliathSpeed;
                         Direction.X = MoveRight;
@@ -127,7 +129,7 @@ namespace GoliathGame.Models
                     SwitchState(State.IdleForward);
                 }
             }
-                if (aCurrentKeyboardState.IsKeyDown(Keys.Up) == true && this.Position.Y >= 500)
+                if (aCurrentKeyboardState.IsKeyDown(Keys.Up) == true && this.Position.Y >= 530)
                 {
                     Speed.Y = GoliathSpeed;
                     Direction.Y = MoveUp;
@@ -135,7 +137,7 @@ namespace GoliathGame.Models
                 }
                 else
                 {
-                    if (this.Position.Y < 500)
+                    if (this.Position.Y < 530)
                     {
                         Speed.Y = GoliathSpeed;
                         Direction.Y = (float)GRAVITY;
@@ -194,7 +196,7 @@ namespace GoliathGame.Models
 
         public override void AttackForwardAnimationUpdate(GameTime theGameTime)
         {
-            int milisecondsPerFrame = 3 * AnimationWithTenTotalFrames;
+            int milisecondsPerFrame = (int)(AttackSpeedDelay * 1000) / (AnimationWithTenTotalFrames - 1);
             this.timeSinceLastFrame += theGameTime.ElapsedGameTime.Milliseconds;
 
             if (timeSinceLastFrame > milisecondsPerFrame)
@@ -212,7 +214,7 @@ namespace GoliathGame.Models
 
         public override void AttackBackwardAnimationUpdate(GameTime theGameTime)
         {
-            int milisecondsPerFrame = 3 * AnimationWithTenTotalFrames;
+            int milisecondsPerFrame = (int)(AttackSpeedDelay * 1000) / (AnimationWithTenTotalFrames - 1);
             this.timeSinceLastFrame += theGameTime.ElapsedGameTime.Milliseconds;
 
             if (timeSinceLastFrame > milisecondsPerFrame)

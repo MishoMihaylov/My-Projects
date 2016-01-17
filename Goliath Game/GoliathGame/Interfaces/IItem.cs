@@ -1,10 +1,8 @@
-﻿using Microsoft.Xna.Framework;
-using GoliathGame.Interfaces.EngineInterfaces;
-
+﻿using GoliathGame.Interfaces.EngineInterfaces;
 
 namespace GoliathGame.Interfaces
 {
-    interface IItem : IPosition, IObject
+    public interface IItem : IPosition, IObject
     {
     }
 }

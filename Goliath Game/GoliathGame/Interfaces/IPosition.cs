@@ -2,7 +2,7 @@
 
 namespace GoliathGame.Interfaces
 {
-    interface IPosition
+    public interface IPosition
     {
         Vector2 Position { get; set; }
     }

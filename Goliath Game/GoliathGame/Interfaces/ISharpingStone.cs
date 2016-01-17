@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GoliathGame.Interfaces
 {
-    interface ISharpingStone
+    public interface ISharpingStone
     {
         void SharpWeapon(IUnit unit);
     }

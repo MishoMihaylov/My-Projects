@@ -1,6 +1,6 @@
 ﻿namespace GoliathGame.Interfaces
 {
-    interface IDefence
+    public interface IDefence
     {
         int Defence { get; set; }   
     }

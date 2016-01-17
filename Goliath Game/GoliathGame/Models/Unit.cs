@@ -12,7 +12,7 @@ namespace GoliathGame.Models
         IdleForward, IdleBackward, AttackForward, AttackBackward, RunningForward, RunningBackward
     }
 
-    abstract class Unit : SpriteObject, IUnit, IAnimation
+    public abstract class Unit : SpriteObject, IUnit, IAnimation
     {
         protected const int AnimationWithTenTotalFrames = 10;
         protected const int MatrixAnimationAssetRows = 4;
@@ -27,7 +27,7 @@ namespace GoliathGame.Models
         private int health = 100;
         private int attackDamage = 7;
         private int attackingRange = 150;
-        private int attackSpeedDelay = 1;
+        private double attackSpeedDelay = 1;
         private int defence = 5;
         private int animationAssetCurrentFrame;
         private TimeSpan lastTimeAttack;  
@@ -38,8 +38,6 @@ namespace GoliathGame.Models
         private Texture2D unitRunningForwardTexture;
         private Texture2D unitRunningBackwardTexture;
         private Texture2D unitDeadTexture;
-        
-        //AttackSpeed TODO
 
         public int Health
         {
@@ -89,7 +87,7 @@ namespace GoliathGame.Models
             }
         }
 
-        public int AttackSpeedDelay
+        public double AttackSpeedDelay
         {
             get { return this.attackSpeedDelay; }
             set
@@ -242,7 +240,7 @@ namespace GoliathGame.Models
 
         public virtual void AttackForwardAnimationUpdate(GameTime theGameTime)
         {
-            int milisecondsPerFrame = (AttackSpeedDelay * 1000) / (AnimationWithTenTotalFrames - 1);
+            int milisecondsPerFrame = (int)(AttackSpeedDelay * 1000) / (AnimationWithTenTotalFrames - 1);
 
             this.timeSinceLastFrame += theGameTime.ElapsedGameTime.Milliseconds;
 
@@ -260,7 +258,7 @@ namespace GoliathGame.Models
 
         public virtual void AttackBackwardAnimationUpdate(GameTime theGameTime)
         {
-            int milisecondsPerFrame = (AttackSpeedDelay * 1000) / (AnimationWithTenTotalFrames - 1);
+            int milisecondsPerFrame = (int)(AttackSpeedDelay * 1000) / (AnimationWithTenTotalFrames - 1);
 
             this.timeSinceLastFrame += theGameTime.ElapsedGameTime.Milliseconds;
 

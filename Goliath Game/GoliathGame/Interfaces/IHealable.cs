@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GoliathGame.Interfaces
+﻿namespace GoliathGame.Interfaces
 {
-    interface IHealable
+    public interface IHealable
     {
         void Heal(IUnit unitToBeHealed);
     }

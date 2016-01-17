@@ -6,7 +6,7 @@ using GoliathGame.Interfaces.EngineInterfaces;
 
 namespace GoliathGame.Models
 {
-    abstract class SpriteObject : ISprite
+    public abstract class SpriteObject : ISprite
     {
         //Да се провери как точно става рисуването на дадената позиция
         private Vector2 position;

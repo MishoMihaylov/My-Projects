@@ -2,7 +2,7 @@
 
 namespace GoliathGame.Interfaces.EngineInterfaces
 {
-    interface IMovable
+    public interface IMovable
     {
         void UpdatePosition(GameTime theGameTime, Vector2 theSpeed, Vector2 theDirection);
     }

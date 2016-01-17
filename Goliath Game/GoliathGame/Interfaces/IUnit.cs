@@ -4,7 +4,7 @@ using GoliathGame.Interfaces.EngineInterfaces;
 
 namespace GoliathGame.Interfaces
 {
-    interface IUnit : IAttack, IDefence, IPosition, IMovable, IObject
+    public interface IUnit : IAttack, IDefence, IPosition, IMovable, IObject
     {
         int Health { get; set; }
         Rectangle Rectangle { get; set; }

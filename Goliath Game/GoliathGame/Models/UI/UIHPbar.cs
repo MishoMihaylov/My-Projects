@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace GoliathGame.Models.UI
 {
-    class UIHPbar : ISprite
+    public class UIHPbar : ISprite
     {
         private Vector2 position;
         private Texture2D bar;

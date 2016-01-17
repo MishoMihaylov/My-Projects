@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 
 namespace GoliathGame.Models
 {
-    class EnemyGirl : Enemy
+    public class EnemyGirl : Enemy
     {
         private const int GirlAttackAnimationFrames = 7;
         private const int GirlRungingAnimationFrames = 8;
@@ -23,6 +23,8 @@ namespace GoliathGame.Models
         public EnemyGirl()
             : base()
         {
+            this.AttackSpeedDelay = 0.5;
+            this.IntervalBetweenAttack = TimeSpan.FromSeconds(this.AttackSpeedDelay + 0.1);
         }
         
         public override void LoadEnemyContent(ContentManager theContentManager)
@@ -36,11 +38,12 @@ namespace GoliathGame.Models
             this.UnitRunningBackwardTexture = theContentManager.Load<Texture2D>(NinjaGirlRunningBackwardAssetPath);
             this.UnitDeadTexture = theContentManager.Load<Texture2D>(NinjaGirlDeadAssetPath);
             base.LoadEnemyContent(theContentManager);
+            this.Position = new Vector2(500, 535);
         }
 
         public override void AttackForwardAnimationUpdate(GameTime theGameTime)
         {
-            int milisecondsPerFrame = (AttackSpeedDelay * 1000) / (GirlAttackAnimationFrames - 1);
+            int milisecondsPerFrame = (int)(AttackSpeedDelay * 1000) / (GirlAttackAnimationFrames - 1);
 
             this.timeSinceLastFrame += theGameTime.ElapsedGameTime.Milliseconds;
 
@@ -58,7 +61,7 @@ namespace GoliathGame.Models
 
         public override void AttackBackwardAnimationUpdate(GameTime theGameTime)
         {
-            int milisecondsPerFrame = (AttackSpeedDelay * 1000) / (GirlAttackAnimationFrames - 1);
+            int milisecondsPerFrame = (int)(AttackSpeedDelay * 1000) / (GirlAttackAnimationFrames - 1);
 
             this.timeSinceLastFrame += theGameTime.ElapsedGameTime.Milliseconds;
 
@@ -144,7 +147,7 @@ namespace GoliathGame.Models
             int column = this.AnimationAssetCurrentFrame % GirlAttackAndRunningAnimationAssetColumns;
 
             Rectangle sourceImageRectangle = new Rectangle(width * column, height * row, width, height);
-            Rectangle destinationImageRectangle = new Rectangle((int)this.Position.X - 85, (int)this.Position.Y, width, height);
+            Rectangle destinationImageRectangle = new Rectangle((int)this.Position.X - 35, (int)this.Position.Y, width, height);
 
             theSpriteBatch.Draw(this.UnitAttackBackwardTexture, destinationImageRectangle, sourceImageRectangle, Color.White);
         }

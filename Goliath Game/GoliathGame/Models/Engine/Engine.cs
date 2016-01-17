@@ -17,16 +17,18 @@ namespace GoliathGame.Models.Engine
         private SharpingStone sharpingStone;
         private Potion potion;
         private Armor armor;
-        private bool sharpingStoneOnTheField;
-        private bool potionOnTheField;
-        private bool armorOnTheField;
         private Goliath mainHero;
         private Enemy al, al1;
         private SpriteFont spriteFont;
         private KeyboardState currentKeyboardState;
+        private Background levelBackground;
+        private bool sharpingStoneOnTheField;
+        private bool potionOnTheField;
+        private bool armorOnTheField;
 
         public Engine()
         {
+            levelBackground = new Background();
             mainHero = new Goliath();
             al = new EnemyNinjaGirl();
             al1 = new EnemyGirl();
@@ -45,10 +47,20 @@ namespace GoliathGame.Models.Engine
         public void Running(GameTime theGameTime)
         {
             EnemiesMove(theGameTime);
-            HeroMove(theGameTime);
-            CheckIfOverItem(mainHero);
-            //Слагаме го заради движенията на главния герой
+            HeroMove(theGameTime);     
             Update(theGameTime);
+        }
+
+        public void LoadContent(ContentManager theContentManager, string theAssetName)
+        {
+            levelBackground.LoadContent(theContentManager, "LevelsBackground/LevelOneBackground");
+            mainHero.LoadGoliathContent(theContentManager);
+            al.LoadEnemyContent(theContentManager);
+            al1.LoadEnemyContent(theContentManager);
+            potion.LoadPotionContent(theContentManager);
+            sharpingStone.LoadPotionContent(theContentManager);
+            armor.LoadArmorContent(theContentManager);
+            spriteFont = theContentManager.Load<SpriteFont>("Font");
         }
 
         public void Update(GameTime theGameTime)
@@ -63,6 +75,7 @@ namespace GoliathGame.Models.Engine
 
         public void Draw(SpriteBatch theSpriteBatch)
         {
+            levelBackground.Draw(theSpriteBatch);
             foreach (var enemy in currentEnemies)
             {
                 enemy.Draw(theSpriteBatch);
@@ -88,46 +101,20 @@ namespace GoliathGame.Models.Engine
                 Color.Yellow);
         }
 
-        public void LoadContent(ContentManager theContentManager, string theAssetName)
-        {
-            mainHero.LoadGoliathContent(theContentManager);
-            al.LoadEnemyContent(theContentManager);
-            al1.LoadEnemyContent(theContentManager);
-            potion.LoadPotionContent(theContentManager);
-            sharpingStone.LoadPotionContent(theContentManager);
-            armor.LoadArmorContent(theContentManager);
-            al1.Position = new Vector2(50, 500);
-            spriteFont = theContentManager.Load<SpriteFont>("Font");
-        }
-
         private bool IsInRange(IUnit attackingUnit, IUnit attackedUnit)
         {
-            if (attackedUnit.AttackingRange <= Math.Abs(GetDistanceX(attackingUnit, attackedUnit)))
+            int distanceBetweenTheUnits = GetDistanceX(attackingUnit, attackedUnit);
+            //TODO Attack range corrections
+            if (distanceBetweenTheUnits > 0)
+            {
+                distanceBetweenTheUnits += 70;
+            }
+
+            if (attackedUnit.AttackingRange <= Math.Abs(distanceBetweenTheUnits))
             {
                 return false;
             }
             return true;
-        }
-
-        private void EnemyMoveToTarget(Unit unit, Unit target, GameTime theGameTime)
-        {
-            Vector2 Direction = Vector2.Zero;
-            const int MOVE_LEFT = -1;
-            const int MOVE_RIGHT = 1;
-
-            unit.Speed.X = 50;
-
-            if (GetDistanceX(unit, target) < 0)
-            {
-                Direction.X = MOVE_RIGHT;
-                unit.UpdatePosition(theGameTime, unit.Speed, Direction);
-            }
-            else
-            {
-                Direction.X = MOVE_LEFT;
-                unit.UpdatePosition(theGameTime, unit.Speed, Direction);
-            }
-
         }
 
         private int GetDistanceX(IUnit unitOne, IUnit unitTwo)
@@ -136,6 +123,27 @@ namespace GoliathGame.Models.Engine
 
             return exactDistance;
         }
+
+        private void EnemyMoveToTarget(Unit unit, Unit target, GameTime theGameTime)
+        {
+            Vector2 Direction = Vector2.Zero;
+            const int MoveLeft = -1;
+            const int MoveRight = 1;
+
+            unit.Speed.X = 50;
+
+            if (GetDistanceX(unit, target) < 0)
+            {
+                Direction.X = MoveRight;
+                unit.UpdatePosition(theGameTime, unit.Speed, Direction);
+            }
+            else
+            {
+                Direction.X = MoveLeft;
+                unit.UpdatePosition(theGameTime, unit.Speed, Direction);
+            }
+
+        }  
 
         private void Strike(IUnit unit, IUnit target)
         {
@@ -172,7 +180,8 @@ namespace GoliathGame.Models.Engine
                                     enemy.SwitchState(State.RunningBackward);
                                 }
 
-                            };
+                            }
+
                             EnemyMoveToTarget(enemy, mainHero, theGameTime);
                         }
                         else
@@ -254,10 +263,15 @@ namespace GoliathGame.Models.Engine
                 {
                     if (IsInRange(mainHero, enemy))
                     {
-                        mainHero.Strike(enemy, theGameTime);
+                        if (!enemy.IsDead())
+                        {
+                            mainHero.Strike(enemy, theGameTime);
+                        }
                     }
                 }
             }
+
+            CheckIfOverItem(mainHero);
         }
     }
 }
