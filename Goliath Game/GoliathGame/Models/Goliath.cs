@@ -176,7 +176,6 @@ namespace GoliathGame.Models
                 //    }
                 //}
             }
-
         }
 
         public override void Draw(SpriteBatch theSpriteBatch)
