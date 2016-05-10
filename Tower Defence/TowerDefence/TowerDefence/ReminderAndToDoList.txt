@@ -1,0 +1,4 @@
+﻿ToDo:
+1. AssetsDB change Asset class with its interface.
+2. Move Central Point from  IGameObject to IEnemy
+3. Make parent of XmlManager with example name Loader
