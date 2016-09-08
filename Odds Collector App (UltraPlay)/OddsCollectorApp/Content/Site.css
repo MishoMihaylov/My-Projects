@@ -1,0 +1,78 @@
+﻿*{
+    font-family: "Times New Roman", Times, serif;
+}
+
+#menu{
+    width:250px;
+    display: inline-block;
+    height: auto;
+    float: left;
+}
+
+#oddInformation{
+    display:inline-block;
+    margin: -19px 0 0 100px;
+}
+
+.btn{
+    width: 300px;
+    background-color: #262626; 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.btn:hover{
+    background-color: #4d4d4d;
+}
+
+.sub-btn{
+    width: 280px;
+    background-color: #555555; 
+    border: none;
+    border-bottom: solid 1px #262626;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+}
+
+.sub-btn:hover{
+    background-color: #696969;
+}
+
+
+.match-header{
+    width: 800px;
+    padding: 10px;
+    border: solid 1px #555555;
+    background-color:darkgrey;
+    text-align: center;
+}
+
+table{
+    margin: -20px 0 0 0;
+    padding: 10px;
+    width: 800px;
+}
+
+th{
+    background-color: grey;
+}
+
+td{
+    background-color: lightgray;
+}
