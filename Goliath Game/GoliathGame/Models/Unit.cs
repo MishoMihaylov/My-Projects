@@ -39,89 +39,6 @@ namespace GoliathGame.Models
         private Texture2D unitRunningBackwardTexture;
         private Texture2D unitDeadTexture;
 
-        public int Health
-        {
-            get
-            {
-                return this.health;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    //throw new ArgumentOutOfRangeException("Unit's health cannot be <= 0");
-                }
-                this.health = value;
-            }
-        }
-
-        public int AttackDamage
-        {
-            get
-            {
-                return this.attackDamage;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Unit's attackDamage cannot be <= 0");
-                }
-                this.attackDamage = value;
-            }
-        }
-
-        public int AttackingRange
-        {
-            get
-            {
-                return attackingRange;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Unit's defence cannot be <= 0");
-                }
-                this.attackingRange = value;
-            }
-        }
-
-        public double AttackSpeedDelay
-        {
-            get { return this.attackSpeedDelay; }
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentException("AttackSpeed must be more >= 0!");
-                }
-                this.attackSpeedDelay = value;
-            }
-        }
-
-        public int Defence
-        {
-            get
-            {
-                return this.defence;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Unit's defence cannot be <= 0");
-                }
-                this.defence = value;
-            }
-        }
-
-        public TimeSpan IntervalBetweenAttack 
-        {
-            get { return this.intervalBetweenAttack; }
-            set { this.intervalBetweenAttack = value; }
-        }
-
         public Texture2D UnitIdleForwardTexture
         {
             get
@@ -204,6 +121,89 @@ namespace GoliathGame.Models
             {
                 this.unitDeadTexture = value;
             }
+        }
+
+        public int Health
+        {
+            get
+            {
+                return this.health;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    //throw new ArgumentOutOfRangeException("Unit's health cannot be <= 0");
+                }
+                this.health = value;
+            }
+        }
+
+        public int AttackDamage
+        {
+            get
+            {
+                return this.attackDamage;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Unit's attackDamage cannot be <= 0");
+                }
+                this.attackDamage = value;
+            }
+        }
+
+        public int AttackingRange
+        {
+            get
+            {
+                return attackingRange;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Unit's defence cannot be <= 0");
+                }
+                this.attackingRange = value;
+            }
+        }
+
+        public double AttackSpeedDelay
+        {
+            get { return this.attackSpeedDelay; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("AttackSpeed must be more >= 0!");
+                }
+                this.attackSpeedDelay = value;
+            }
+        }
+
+        public int Defence
+        {
+            get
+            {
+                return this.defence;
+            }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Unit's defence cannot be <= 0");
+                }
+                this.defence = value;
+            }
+        }
+
+        public TimeSpan IntervalBetweenAttack 
+        {
+            get { return this.intervalBetweenAttack; }
+            set { this.intervalBetweenAttack = value; }
         }
 
         public Rectangle Rectangle { get; set; }
@@ -621,5 +621,7 @@ namespace GoliathGame.Models
                 this.animationAssetCurrentFrame = value;
             }
         }
+
+        
     }
 }

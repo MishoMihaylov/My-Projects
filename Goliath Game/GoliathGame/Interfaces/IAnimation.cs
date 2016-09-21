@@ -5,6 +5,7 @@ namespace GoliathGame.Interfaces
 {
     public interface IAnimation
     {
+        Texture2D UnitIdleForwardTexture { get; set; }
         Texture2D UnitIdleBackwardTexture {get; set;}
         Texture2D UnitAttackForwardTexture { get; set; }
         Texture2D UnitAttackBackwardTexture {get; set;}
