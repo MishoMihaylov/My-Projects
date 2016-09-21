@@ -7,6 +7,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Input;
+using GoliathGame.Models.Items;
+using GoliathGame.Models.Units;
 
 namespace GoliathGame.Models.Engine
 {
@@ -217,16 +219,16 @@ namespace GoliathGame.Models.Engine
         private void EnemyDropItem(IUnit dyingEnemy)
         {
             //must drop one of 3 items
-            //if (!potionOnTheField)
-            //{
-            //    potion.Position = new Vector2(dyingEnemy.Position.X, dyingEnemy.Position.Y + 130);
-            //    potionOnTheField = true;
-            //}
-            //if (!sharpingStoneOnTheField)
-            //{
-            //    sharpingStone.Position = new Vector2(dyingEnemy.Position.X, dyingEnemy.Position.Y + 130);
-            //    sharpingStoneOnTheField = true;
-            //}
+            if (!potionOnTheField)
+            {
+                potion.Position = new Vector2(dyingEnemy.Position.X, dyingEnemy.Position.Y + 130);
+                potionOnTheField = true;
+            }
+            if (!sharpingStoneOnTheField)
+            {
+                sharpingStone.Position = new Vector2(dyingEnemy.Position.X, dyingEnemy.Position.Y + 130);
+                sharpingStoneOnTheField = true;
+            }
             if (!armorOnTheField)
             {
                 armor.Position = new Vector2(dyingEnemy.Position.X, dyingEnemy.Position.Y + 130);
@@ -236,16 +238,16 @@ namespace GoliathGame.Models.Engine
 
         private void CheckIfOverItem(IUnit Unit)
         {
-            //if (Math.Abs(Unit.Position.X - potion.Position.X) < 50 && potionOnTheField)
-            //{
-            //    potion.Heal(Unit);
-            //    potionOnTheField = false;
-            //}
-            //if (Math.Abs(Unit.Position.X - sharpingStone.Position.X) < 50 && sharpingStoneOnTheField)
-            //{
-            //    sharpingStone.SharpWeapon(Unit);
-            //    sharpingStoneOnTheField = false;
-            //}
+            if (Math.Abs(Unit.Position.X - potion.Position.X) < 50 && potionOnTheField)
+            {
+                potion.Heal(Unit);
+                potionOnTheField = false;
+            }
+            if (Math.Abs(Unit.Position.X - sharpingStone.Position.X) < 50 && sharpingStoneOnTheField)
+            {
+                sharpingStone.SharpWeapon(Unit);
+                sharpingStoneOnTheField = false;
+            }
             if (Math.Abs(Unit.Position.X - armor.Position.X) < 50 && armorOnTheField)
             {
                 armor.Equip(Unit);

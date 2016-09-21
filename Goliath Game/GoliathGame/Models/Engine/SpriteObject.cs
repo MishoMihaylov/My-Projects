@@ -8,19 +8,10 @@ namespace GoliathGame.Models
 {
     public abstract class SpriteObject : ISprite
     {
-        //Да се провери как точно става рисуването на дадената позиция
         private Vector2 position;
         private Texture2D mainSpriteObjectTexture;
         private string assetName;
 
-        //Име на картинката на обекта
-        //protected string AssetName
-        //{
-        //    get { return this.assetName; }
-        //    set { this.assetName = value;}
-        //}
-
-        //Позиция на обекта
         public Vector2 Position 
         {
             get { return this.position; }
@@ -57,17 +48,14 @@ namespace GoliathGame.Models
             }
         }
 
-        //Зареждане на обекта
         public virtual void LoadContent(ContentManager theContentManager, string theAssetName)
         {
             this.MainSpriteObjectTexture = theContentManager.Load<Texture2D>(theAssetName);
             this.assetName = theAssetName;
         }
 
-        //Update everything - movement, assetchange, health and others
         public virtual void Update(GameTime theGameTime){}
 
-        //Чартане на обекта върху прозореца на играта
         public virtual void Draw(SpriteBatch theSpriteBatch)
         {
             theSpriteBatch.Draw(this.mainSpriteObjectTexture, this.Position,

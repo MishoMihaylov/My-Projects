@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using GoliathGame.Interfaces;
 using GoliathGame.Interfaces.EngineInterfaces;
-using Microsoft.Xna.Framework.Input;
 
 namespace GoliathGame.Models.UI
 {
@@ -11,7 +10,7 @@ namespace GoliathGame.Models.UI
     {
         private Vector2 position;
         private Texture2D bar;
-        IUnit currentUnit;
+        private IUnit currentUnit;
         private int scaleX = 1; 
         private int scaleY = 1;
         private int width;

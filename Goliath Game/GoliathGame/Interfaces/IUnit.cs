@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using GoliathGame.Interfaces.EngineInterfaces;
 
 namespace GoliathGame.Interfaces

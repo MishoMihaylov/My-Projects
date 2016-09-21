@@ -57,24 +57,25 @@
     <Compile Include="Interfaces\IPosition.cs" />
     <Compile Include="Interfaces\ISharpingStone.cs" />
     <Compile Include="Interfaces\IUnit.cs" />
-    <Compile Include="Models\Armor.cs" />
+    <Compile Include="Models\Items\Armor.cs" />
     <Compile Include="Models\Background.cs" />
-    <Compile Include="Models\Enemy.cs" />
-    <Compile Include="Models\EnemyGirl.cs" />
-    <Compile Include="Models\EnemyNinjaGirl.cs" />
+    <Compile Include="Models\Units\Enemy.cs" />
+    <Compile Include="Models\Units\EnemyGirl.cs" />
+    <Compile Include="Models\Units\EnemyNinjaGirl.cs" />
     <Compile Include="Models\Engine\Engine.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\Goliath.cs" />
+    <Compile Include="Models\Items\Item.cs" />
+    <Compile Include="Models\Units\Goliath.cs" />
     <Compile Include="Models\Engine\SpriteObject.cs" />
     <Compile Include="Models\ObjectsDatabase\ObjectsData.cs" />
-    <Compile Include="Models\Potion.cs" />
-    <Compile Include="Models\SharpingStone.cs" />
+    <Compile Include="Models\Items\Potion.cs" />
+    <Compile Include="Models\Items\SharpingStone.cs" />
     <Compile Include="Models\UI\HeroUI.cs" />
     <Compile Include="Models\UI\UIButton.cs" />
     <Compile Include="Models\UI\UIEventLog.cs" />
     <Compile Include="Models\UI\UIHPbar.cs" />
-    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\Units\Unit.cs" />
     <Compile Include="MainStart.cs" />
+    <Compile Include="Models\Utils\Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -101,8 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram.cd" />
     <None Include="Content\Font.spritefont" />
-    <None Include="GoliathGameClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

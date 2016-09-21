@@ -1,19 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using GoliathGame.Models;
-using GoliathGame.Models.UI;
 using GoliathGame.Models.Engine;
-using GoliathGame.Interfaces;
-using System.Collections.Generic;
+using GoliathGame.Interfaces.EngineInterfaces;
 
 namespace GoliathGame
 {
-    public class GoliathRun : Game
+    public sealed class GoliathRun : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Engine newEngine;
+        IEngine newEngine;
 
         public GoliathRun()
         {
