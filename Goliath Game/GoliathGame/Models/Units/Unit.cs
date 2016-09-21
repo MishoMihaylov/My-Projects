@@ -2,6 +2,7 @@
 using GoliathGame.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using GoliathGame.Models.Core;
 
 namespace GoliathGame.Models.Units
 {

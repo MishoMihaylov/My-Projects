@@ -11,10 +11,10 @@ namespace GoliathGame.Models.Units
         public EnemyNinjaGirl()
             : base()
         {
+            this.Position = new Vector2(0, 535);
             this.AttackSpeedDelay = 0.3;
             this.IntervalBetweenAttack = TimeSpan.FromSeconds(this.AttackSpeedDelay + 0.1);
             this.enemyHpBar.Position = new Vector2(this.Position.X + 100, this.Position.Y);
-            this.Position = new Vector2(300, 535);
         }
 
         public override void LoadEnemyContent(ContentManager theContentManager)

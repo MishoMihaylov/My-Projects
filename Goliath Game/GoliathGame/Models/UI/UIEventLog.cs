@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using GoliathGame.Interfaces;
-using GoliathGame.Interfaces.EngineInterfaces;
+using GoliathGame.Interfaces.AnimationInterfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;

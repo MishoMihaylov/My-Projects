@@ -8,11 +8,9 @@ namespace GoliathGame.Models.Units
 {
     public abstract class Enemy : Unit
     {
-        private int startPositionX = 500;
-        private const int startPositionY = 500;
-        protected UIHPbar enemyHpBar;
         public bool readyToBeRemoved = false;
-
+        protected UIHPbar enemyHpBar;
+        
         protected Enemy() 
         {
             this.enemyHpBar = new UIHPbar(this, new Vector2(this.Position.X + 50, this.Position.Y), 7, 1, 1);
@@ -20,7 +18,6 @@ namespace GoliathGame.Models.Units
 
         public virtual void LoadEnemyContent(ContentManager theContentManager)
         {
-            this.Position = new Vector2(startPositionX, startPositionY);
             this.enemyHpBar.LoadContent(theContentManager, Constants.HealthBarPath);
         }
 

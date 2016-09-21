@@ -1,4 +1,4 @@
-﻿using GoliathGame.Interfaces.EngineInterfaces;
+﻿using GoliathGame.Interfaces.AnimationInterfaces;
 
 namespace GoliathGame.Interfaces
 {

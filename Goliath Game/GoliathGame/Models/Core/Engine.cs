@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using GoliathGame.Models.UI;
 using GoliathGame.Interfaces;
-using GoliathGame.Interfaces.EngineInterfaces;
+using GoliathGame.Interfaces.AnimationInterfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
@@ -10,10 +10,11 @@ using Microsoft.Xna.Framework.Input;
 using GoliathGame.Models.Items;
 using GoliathGame.Models.Units;
 
-namespace GoliathGame.Models.Engine
+namespace GoliathGame.Models.Core
 {
     class Engine : IEngine
     {
+        //Currently doing some tests here
         private HeroUI heroUI;
         private LinkedList<Enemy> currentEnemies;
         private SharpingStone sharpingStone;

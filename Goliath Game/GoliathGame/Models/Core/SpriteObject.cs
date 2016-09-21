@@ -2,9 +2,9 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using GoliathGame.Interfaces.EngineInterfaces;
+using GoliathGame.Interfaces.AnimationInterfaces;
 
-namespace GoliathGame.Models
+namespace GoliathGame.Models.Core
 {
     public abstract class SpriteObject : ISprite
     {

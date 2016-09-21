@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GoliathGame.Models.Core;
+using Microsoft.Xna.Framework;
 
 namespace GoliathGame.Models
 {

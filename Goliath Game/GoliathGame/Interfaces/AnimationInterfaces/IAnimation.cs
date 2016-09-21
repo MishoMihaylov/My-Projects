@@ -13,6 +13,7 @@ namespace GoliathGame.Interfaces
         void IdleForwardAnimationUpdate(GameTime theGameTime);
         void IdleBackwardAnimationUpdate(GameTime theGameTime);
         void DeadAnimationUpdate(GameTime theGameTime);
+
         //Draw Methods
         void AttackForwardAnimationDraw(SpriteBatch theSpriteBatch);
         void AttackBackwardAnimationDraw(SpriteBatch theSpriteBatch);

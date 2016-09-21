@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace GoliathGame.Interfaces.EngineInterfaces
+namespace GoliathGame.Interfaces.AnimationInterfaces
 {
     public interface IEngine : IObject
     {

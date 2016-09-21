@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using GoliathGame.Interfaces.EngineInterfaces;
+using GoliathGame.Interfaces.AnimationInterfaces;
 using GoliathGame.Interfaces;
 
 namespace GoliathGame.Models.UI

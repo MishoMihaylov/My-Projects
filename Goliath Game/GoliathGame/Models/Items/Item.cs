@@ -1,8 +1,9 @@
 ﻿using GoliathGame.Interfaces;
+using GoliathGame.Models.Core;
 
 namespace GoliathGame.Models.Items
 {
-    class  Item : SpriteObject, IItem
+    public class  Item : SpriteObject, IItem
     {
     }
 }

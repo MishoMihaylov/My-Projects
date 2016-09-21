@@ -1,4 +1,4 @@
-﻿namespace GoliathGame.Interfaces.EngineInterfaces
+﻿namespace GoliathGame.Interfaces.AnimationInterfaces
 {
     public interface ISprite : IPosition, IObject
     {  

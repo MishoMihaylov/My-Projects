@@ -36,18 +36,18 @@
       <FileName>Models\Units\EnemyNinjaGirl.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GoliathGame.Models.SpriteObject" Collapsed="true">
+  <Class Name="GoliathGame.Models.Core.SpriteObject" Collapsed="true">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAQACgAkAAgAKAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
-      <FileName>Models\Engine\SpriteObject.cs</FileName>
+      <FileName>Models\Core\SpriteObject.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="GoliathGame.Models.Units.Goliath" Collapsed="true">
     <Position X="4.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>KAWAAAAAEAggAiBEAAARQQAIAAAyAAQIygAQAAAKAAA=</HashCode>
+      <HashCode>AASAAAgAEAggAiBEAAgxQQAAAAAyAAQIigAQAAAKAAA=</HashCode>
       <FileName>Models\Units\Goliath.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -83,11 +83,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="GoliathGame.Models.Engine.Engine" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="GoliathGame.Models.Core.Engine" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="20" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAwABARAAAAQAgAgACAAAEEAAAAGEAAJUCkAABCgAAw=</HashCode>
-      <FileName>Models\Engine\Engine.cs</FileName>
+      <FileName>Models\Core\Engine.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
@@ -133,7 +133,7 @@
   <Class Name="GoliathGame.Models.Utils.Constants" Collapsed="true">
     <Position X="18.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAQABAAAgAigCAAAAAAAEAIACBCACBAAAUICFAAA=</HashCode>
+      <HashCode>BAEAAQABAAAgAigCAAAAAAAEAIACBCAKRAAAUICFAAA=</HashCode>
       <FileName>Models\Utils\Constants.cs</FileName>
     </TypeIdentifier>
   </Class>

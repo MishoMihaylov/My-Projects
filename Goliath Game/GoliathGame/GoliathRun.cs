@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using GoliathGame.Models.Engine;
-using GoliathGame.Interfaces.EngineInterfaces;
+using GoliathGame.Models.Core;
+using GoliathGame.Interfaces.AnimationInterfaces;
 
 namespace GoliathGame
 {
