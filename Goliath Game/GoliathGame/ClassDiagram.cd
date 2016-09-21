@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GoliathGame.Models.Items.Armor" Collapsed="true">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAACAAAAAAAAAAAAgAAAAABAAAAA=</HashCode>
+      <FileName>Models\Items\Armor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GoliathGame.Models.Background" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Background.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoliathGame.Models.Units.Enemy" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQKAAAAAAACAjAAAAAQAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>Models\Units\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoliathGame.Models.Units.EnemyGirl" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAEABAAAAEQAgQAAAAAkCAAAAICDAQAAAAAQA=</HashCode>
+      <FileName>Models\Units\EnemyGirl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoliathGame.Models.Units.EnemyNinjaGirl" Collapsed="true">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAQAAAAAAA=</HashCode>
+      <FileName>Models\Units\EnemyNinjaGirl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoliathGame.Models.SpriteObject" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAQACgAkAAgAKAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Engine\SpriteObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GoliathGame.Models.Units.Goliath" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAWAAAAAEAggAiBEAAARQQAIAAAyAAQIygAQAAAKAAA=</HashCode>
+      <FileName>Models\Units\Goliath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoliathGame.Models.Items.Item" Collapsed="true">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Items\Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GoliathGame.Models.Items.Potion" Collapsed="true">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAgAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Items\Potion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GoliathGame.Models.Items.SharpingStone" Collapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAABAAA=</HashCode>
+      <FileName>Models\Items\SharpingStone.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GoliathGame.Models.Units.Unit" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggIBDEAAEAAAACIE4igTEDABAESikEIIiAASFoCIAQo=</HashCode>
+      <FileName>Models\Units\Unit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GoliathGame.Models.Engine.Engine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwABARAAAAQAgAgACAAAEEAAAAGEAAJUCkAABCgAAw=</HashCode>
+      <FileName>Models\Engine\Engine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GoliathGame.Models.ObjectsDatabase.ObjectsData" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ObjectsDatabase\ObjectsData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GoliathGame.Models.UI.HeroUI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQYAEAgAAAAEgAgAAAAAAAAAAAAAAAAAAQAAAAAAAQ=</HashCode>
+      <FileName>Models\UI\HeroUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GoliathGame.Models.UI.UIButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAoAgAAAAAAAAAAAAAAAAAAAAgAAAAoQ=</HashCode>
+      <FileName>Models\UI\UIButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GoliathGame.Models.UI.UIEventLog" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAABACAAAAAgCgACAAAIAAAAAAAAACAAEQAAAAAAQ=</HashCode>
+      <FileName>Models\UI\UIEventLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GoliathGame.Models.UI.UIHPbar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAgAAAAAgQgQAAAIAACABAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\UI\UIHPbar.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GoliathGame.Models.Utils.Constants" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQABAAAgAigCAAAAAAAEAIACBCACBAAAUICFAAA=</HashCode>
+      <FileName>Models\Utils\Constants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GoliathGame.Models.UI.Log" Collapsed="true">
+    <Position X="18.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAgAARAIQAEAAAAABCAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UI\UIEventLog.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="GoliathGame.Models.Units.State" Collapsed="true">
+    <Position X="20" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAQAAAAAAAAAQAAAEAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Models\Units\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GoliathGame.Models.UI.KindOfBattleEvent" Collapsed="true">
+    <Position X="18.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAEAAAAAAAAAgAAgAAA=</HashCode>
+      <FileName>Models\UI\UIEventLog.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
