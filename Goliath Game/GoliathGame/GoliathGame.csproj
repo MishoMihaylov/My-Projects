@@ -66,7 +66,6 @@
     <Compile Include="Models\Items\Item.cs" />
     <Compile Include="Models\Units\Goliath.cs" />
     <Compile Include="Models\Core\SpriteObject.cs" />
-    <Compile Include="Models\ObjectsDatabase\ObjectsData.cs" />
     <Compile Include="Models\Items\Potion.cs" />
     <Compile Include="Models\Items\SharpingStone.cs" />
     <Compile Include="Models\UI\HeroUI.cs" />
